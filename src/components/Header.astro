@@ -1,0 +1,106 @@
+---
+import WorkingIcon from "../icons/WorkingIcon.astro"
+import ProjectsIcon from "../icons/ProjectsIcon.astro"
+import AboutMeIcon from "../icons/AboutMeIcon.astro"
+import ContactIcon from "../icons/ContactIcon.astro"
+---
+
+<header>
+  <nav>
+    <ul>
+      <li>
+        <a href="#experiencia">
+          <WorkingIcon />
+          Experiencia
+        </a>
+      </li>
+      <li>
+        <a href="#proyectos">
+          <ProjectsIcon />
+          Proyectos
+        </a>
+      </li>
+      <li>
+        <a href="#sobre-mi">
+          <AboutMeIcon />
+          Sobre mi
+        </a>
+      </li>
+      <li>
+        <a href="#contacto">
+          <ContactIcon />
+          Contacto
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid hsla(var(--text-color) / 30%);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    animation: shrink-header linear forwards;
+    animation-timeline: scroll();
+    animation-range: 0vh 200px;
+  }
+
+  @keyframes shrink-header {
+    from {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    
+    to {
+      padding-top: 0;
+      padding-bottom: 0;
+      backdrop-filter: blur(10px);
+    }
+  }
+
+  nav > ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav > ul > li:not(:last-child) {
+    border-right: 1px solid hsla(var(--text-color) / 30%);
+  }
+
+  nav > ul > li > a {
+    display: flex;
+    gap: .25rem;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    background: transparent;
+    height: 100%;
+
+    transition: background .15s linear;
+  }
+
+  nav > ul > li:first-of-type > a {
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+  }
+  
+  nav > ul > li:last-of-type > a {
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+  }
+
+  nav > ul > li > a:hover {
+    background: hsla(var(--accent-color) / 50%)
+  }
+</style>

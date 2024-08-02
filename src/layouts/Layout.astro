@@ -1,0 +1,93 @@
+---
+import '@fontsource-variable/inter';
+import '@fontsource-variable/roboto-mono';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--text-color: 0 0% 22%;
+		--accent-color: 47 100% 66%;
+		--font-title: normal bold 1rem 'Inter', sans-serif;
+		--font-subtitle: normal normal .875rem 'Roboto Mono', monospace;
+		--font-body: normal normal .875rem 'Inter', sans-serif;
+	}
+
+	* {
+		min-width: 0;
+		font: inherit;
+		scroll-behavior: smooth;
+	}
+
+	*, *::after, *::before { box-sizing: border-box; }
+
+	img, video, svg {
+		display: block;
+		height: auto;
+		max-width: 100%;
+	}
+
+	body {
+		margin: 0;
+		min-height: 100dvh;
+		display: grid;
+		place-content: center;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: hsl(var(--text-color));
+		font: var(--font-title);
+		text-wrap: balance;
+	}
+
+	p, span, a {
+		color: hsl(var(--text-color));
+		font: var(--font-body);
+		text-wrap: pretty;
+	}
+
+	h1::selection, 
+	h2::selection, 
+	h3::selection, 
+	h4::selection, 
+	h5::selection, 
+	h6::selection, 
+	p::selection, 
+	span::selection, 
+	a::selection,
+	mark::selection,
+	strong::selection,
+	em::selection {
+		background-color: hsla(var(--accent-color));
+	}
+
+	button, img, input, select, textarea {
+		user-select: none;
+	}
+	
+	ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+</style>
