@@ -5,17 +5,19 @@ import WorkingBadge from '../components/WorkingBadge.astro';
 import RRSSList from '../components/RRSSList.svelte';
 
 import { WORKING_TIME } from '../constants';
+import Experience from '../components/Experience.astro';
 ---
 
 <Layout title="Welcome to Astro.">
+	<Header />
 	<main>
-		<Header />
 		<section id="hero">
 			<section>
 				<div>
 					<h1>Pol Cortés</h1>
 					<span>Desarrollador Frontend - { WORKING_TIME() }</span>
-					<p>Apasionado por la <mark>UX</mark> y el <mark>SEO</mark></p>
+					<p>Apasionado por la <mark>UX</mark> y el <mark>SEO</mark>.</p>
+					<p>Experiencia en <mark>agencia de diseño</mark> y desarrollo de una <mark>ERP</mark>.</p>
 					<div>
 						<WorkingBadge />
 						―
@@ -28,18 +30,28 @@ import { WORKING_TIME } from '../constants';
 
 		<section id="experiencia">
 			<h2>Experiencia</h2>
+
+			<Experience />
 		</section>
+
+		<footer id="footer">
+			<p>Porfolio hecho con Astro y Svelte.</p>
+			<ul>
+				<li>
+					<a href="https://www.linkedin.com/in/pol-cort%C3%A9s-757b69285/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+				</li>
+				<li>
+					·
+				</li>
+				<li>
+					<a href="https://www.github.com/polcortes/porfolio" target="_blank" rel="noopener noreferrer">Repo</a>
+				</li>
+			</ul>
+		</footer>
 	</main>
 </Layout>
 
 <style>
-	mark {
-		background-color: hsla(var(--accent-color));
-		color: var(--text-color);
-		padding-inline: .125rem;
-		border-radius: .125rem;
-	}
-
 	main {
 		position: relative;
 		padding: 0rem 2rem 1rem;
@@ -59,6 +71,7 @@ import { WORKING_TIME } from '../constants';
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+    gap: 12rem;
 	}
 	
 	#hero section:first-of-type div span {
@@ -75,7 +88,14 @@ import { WORKING_TIME } from '../constants';
 		font: var(--font-body);
 		font-size: 1.125rem;
 		padding-left: .2rem;
-		margin-bottom: .25rem;
+		/* margin-bottom: .25rem; */
+		margin-top: .75rem;
+		line-height: 1.5;
+	}
+
+	#hero section:first-of-type div p:last-of-type {
+		margin-top: 0;
+		margin-bottom: .5rem;
 	}
 
 	#hero section:first-of-type div > div {
@@ -107,6 +127,7 @@ import { WORKING_TIME } from '../constants';
 		font-weight: 800;
 		margin: 0;
 		padding-bottom: 1rem;
+		margin-bottom: 1.5rem;
 		position: relative;
 	}
 
@@ -123,4 +144,65 @@ import { WORKING_TIME } from '../constants';
     rotate: -4deg;
     z-index: -1;
 	}
+
+	#footer {
+		background: rgba(0, 0, 0, .05);
+		padding: 1rem 2rem;
+		border-radius: .75rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	#footer ul {
+		display: flex;
+		gap: 1rem;
+		list-style: none;
+	}
+
+	#footer ul a {
+		color: hsl(var(--text-color));
+		text-decoration: none;
+		padding: .125rem .25rem;
+		border-radius: .25rem;
+		transition: background .15s linear;
+	}
+
+	#footer ul a:hover {
+		text-decoration: underline;
+		background: rgba(0, 0, 0, .05);
+	}
+
+@media screen and (max-width: 1440px) {
+	main {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 950px) {
+	#hero img {
+		width: 7rem;
+	}
+
+	#hero section:first-of-type {
+		align-items: flex-start;
+    gap: 0;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	:root {
+		font-size: 14px;
+	}
+
+	#footer {
+		margin-bottom: 5rem;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	h1 {
+		font-size: 3rem;
+	}
+}
 </style>

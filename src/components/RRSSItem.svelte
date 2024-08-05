@@ -22,6 +22,7 @@
     display: grid;
     place-content: center;
     width: fit-content;
+    border-radius: 50%;
   }
 
   li > span {
@@ -36,7 +37,7 @@
     border-radius: .25rem;
     pointer-events: none;
 
-    transition: opacity 0.2s, top 0.3s;
+    transition: opacity 0.2s .15s, top 0.3s .15s;
   }
 
   li:has(> a:hover) > span {

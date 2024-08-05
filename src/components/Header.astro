@@ -47,10 +47,12 @@ import ContactIcon from "../icons/ContactIcon.astro"
     border-bottom: 1px solid hsla(var(--text-color) / 30%);
     padding-top: 1rem;
     padding-bottom: 1rem;
+    background: hsla(0, 0%, 100%, 90%);
+    z-index: 999;
 
     animation: shrink-header linear forwards;
     animation-timeline: scroll();
-    animation-range: 0vh 200px;
+    animation-range: 0vh 100px;
   }
 
   @keyframes shrink-header {
@@ -102,5 +104,35 @@ import ContactIcon from "../icons/ContactIcon.astro"
 
   nav > ul > li > a:hover {
     background: hsla(var(--accent-color) / 50%)
+  }
+
+  @media screen and (max-width: 650px) {
+    header {
+      bottom: 0;
+      top: unset;
+      box-sizing: border-box;
+      position: fixed;
+      padding: 0 !important;
+      background: white;
+
+      animation: none;
+    }
+
+    header nav,
+    header nav > ul {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    header nav ul li a,
+    header nav ul li {
+      box-sizing: border-box;
+      width: 100%;
+      flex-direction: column;
+    }
+
+    header nav ul li a {
+      padding-block: 1rem;
+    }
   }
 </style>
