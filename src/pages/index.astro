@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import WorkingBadge from '../components/WorkingBadge.astro';
+import Project from '../components/Project.astro';
 import RRSSList from '../components/RRSSList.svelte';
 
 import { WORKING_TIME } from '../constants';
@@ -32,6 +33,36 @@ import Experience from '../components/Experience.astro';
 			<h2>Experiencia</h2>
 
 			<Experience />
+		</section>
+
+		<section id="proyectos">
+			<h2>Proyectos</h2>
+			<section>
+				<!-- title, description, link, linkTitle, github, img, imgAlt, imgTitle, techs -->
+				<Project 
+					title="F5 Futsal" 
+					description="Landing sencilla hecha con Wordpress y Elementor." 
+					link="https://f5futsal.com/" 
+					linkTitle="Enlace a la landing de F5 Futsal" 
+					github={ null } 
+					img="https://pol-cortes.netlify.app/imgs/projects/f5futsal.webp" 
+					imgAlt="Foto de la landing de F5 Futsal" 
+					imgTitle="Landing F5 Futsal" 
+					techs={[ "HTML5", "CSS3", "JavaScript", "JQuery", "PHP", "WordPress", "Elementor" ]}
+				/>
+
+				<Project 
+					title="F5 Futsal" 
+					description="Landing sencilla hecha con Wordpress y Elementor." 
+					link="https://f5futsal.com/" 
+					linkTitle="Enlace a la landing de F5 Futsal" 
+					github={ null } 
+					img="https://pol-cortes.netlify.app/imgs/projects/f5futsal.webp" 
+					imgAlt="Foto de la landing de F5 Futsal" 
+					imgTitle="Landing F5 Futsal" 
+					techs={[ "HTML5", "CSS3", "JavaScript", "JQuery", "PHP", "WordPress", "Elementor" ]}
+				/>
+			</section>
 		</section>
 
 		<footer id="footer">
@@ -145,6 +176,16 @@ import Experience from '../components/Experience.astro';
     z-index: -1;
 	}
 
+	#experiencia, #proyectos {
+		padding-bottom: 3rem;
+	}
+
+	#proyectos > section {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+	}
+
 	#footer {
 		background: rgba(0, 0, 0, .05);
 		padding: 1rem 2rem;
@@ -187,6 +228,12 @@ import Experience from '../components/Experience.astro';
 	#hero section:first-of-type {
 		align-items: flex-start;
     gap: 0;
+	}
+}
+
+@media screen and (max-width: 860px) {
+	#proyectos > section {
+		grid-template-columns: 1fr;
 	}
 }
 
