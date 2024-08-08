@@ -25,13 +25,13 @@ const t = useTranslations(lang);
 					<h1>{ t("hero").title }</h1>
 					<span>{ t("hero").subtitle }{ WORKING_TIME() }</span>
 					<p>
-						{ t("hero").description1.map((desc, i) => {
+						{ t("hero").description1.map((desc: string, i: number) => {
 						if (i % 2 === 0) return desc
 						return <mark>{ desc }</mark>
 						})}
 					</p>
 					<p>
-						{ t("hero").description2.map((desc, i) => {
+						{ t("hero").description2.map((desc: string, i: number) => {
 						if (i % 2 === 0) return desc
 						return <mark>{ desc }</mark>
 						})}
