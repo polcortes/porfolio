@@ -3,6 +3,13 @@ import WorkingIcon from "../icons/WorkingIcon.astro"
 import ProjectsIcon from "../icons/ProjectsIcon.astro"
 import AboutMeIcon from "../icons/AboutMeIcon.astro"
 import ContactIcon from "../icons/ContactIcon.astro"
+
+import Options from "./Options.svelte"
+
+import { getLangFromUrl, useTranslations } from '$lib/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <header>
@@ -20,17 +27,20 @@ import ContactIcon from "../icons/ContactIcon.astro"
           Proyectos
         </a>
       </li>
-      <li>
+      <!-- <li>
         <a href="#sobre-mi">
           <AboutMeIcon />
           Sobre mi
         </a>
-      </li>
+      </li> -->
       <li>
         <a href="#contacto">
           <ContactIcon />
           Contacto
         </a>
+      </li>
+      <li>
+        <Options text={ t("navbar").options } drawerTitle={ t("navbar").optionsTitle } drawerDescription={ t("navbar").optionsDescription } client:load />
       </li>
     </ul>
   </nav>
@@ -48,11 +58,15 @@ import ContactIcon from "../icons/ContactIcon.astro"
     padding-top: 1rem;
     padding-bottom: 1rem;
     background: hsla(0, 0%, 100%, 90%);
-    z-index: 999;
+    z-index: 5;
 
     animation: shrink-header linear forwards;
     animation-timeline: scroll();
     animation-range: 0vh 100px;
+  }
+
+  header ul li:last-of-type {
+    display: none;
   }
 
   @keyframes shrink-header {
@@ -79,7 +93,8 @@ import ContactIcon from "../icons/ContactIcon.astro"
     border-right: 1px solid hsla(var(--text-color) / 30%);
   }
 
-  nav > ul > li > a {
+  nav > ul > li > a,
+  nav > ul > li button {
     display: flex;
     gap: .25rem;
     justify-content: center;
@@ -88,21 +103,25 @@ import ContactIcon from "../icons/ContactIcon.astro"
     padding: .5rem .75rem;
     background: transparent;
     height: 100%;
+    width: 100%;
 
     transition: background .15s linear;
   }
 
-  nav > ul > li:first-of-type > a {
+  nav > ul > li:first-of-type > a,
+  nav > ul > li:first-of-type button {
     border-top-left-radius: .25rem;
     border-bottom-left-radius: .25rem;
   }
   
-  nav > ul > li:last-of-type > a {
+  nav > ul > li:last-of-type > a
+  nav > ul > li:last-of-type button {
     border-top-right-radius: .25rem;
     border-bottom-right-radius: .25rem;
   }
 
-  nav > ul > li > a:hover {
+  nav > ul > li > a:hover
+  nav > ul > li button:hover {
     background: hsla(var(--accent-color) / 50%)
   }
 
@@ -125,14 +144,20 @@ import ContactIcon from "../icons/ContactIcon.astro"
     }
 
     header nav ul li a,
+    header nav ul li button,
     header nav ul li {
       box-sizing: border-box;
       width: 100%;
       flex-direction: column;
     }
 
-    header nav ul li a {
+    header nav ul li a,
+    header nav ul li button {
       padding-block: 1rem;
+    }
+
+    header ul li:last-of-type {
+      display: flex;
     }
   }
 </style>

@@ -1,0 +1,27 @@
+.headerButton {
+  display: flex;
+  gap: .25rem;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: .5rem .75rem;
+  background: transparent;
+  height: 100%;
+  border-top-right-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+
+  transition: background .15s linear;
+}
+
+.headerButton:hover {
+  background: hsla(47 100% 66% / 50%);
+}
+
+@media screen and (max-width: 650px) {
+  .headerButton {
+    box-sizing: border-box;
+    width: 100%;
+    flex-direction: column;
+    padding-block: 1rem;
+  }
+}

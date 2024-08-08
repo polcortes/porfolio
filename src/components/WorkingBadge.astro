@@ -1,7 +1,15 @@
+---
+interface Props {
+  text: string;
+}
+
+const { text } = Astro.props;
+---
+
 <span class="working-badge">
   <span class="color-indicator"></span>
   <span class="working-badge-text">
-    Trabajando actualmente
+    { text }
   </span>
 </span>
 
