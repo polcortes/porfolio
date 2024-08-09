@@ -2,6 +2,11 @@
 import '@fontsource-variable/inter';
 import '@fontsource-variable/roboto-mono';
 
+import { getLangFromUrl, useTranslations } from '$lib/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 interface Props {
 	title: string;
 }
@@ -10,14 +15,17 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={ lang }>
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={ t('meta').description } />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="keywords" content={ t('meta').keywords }>
+		<link rel="canonical" href="https://polcortes.vercel.app" />
 		<!-- <meta name="generator" content={Astro.generator} /> -->
-		<title>{title}</title>
+		<meta name="theme-color" content="#FFD952" />
+		<title>{ t('meta').title }</title>
 	</head>
 	<body>
 		<slot />
@@ -36,6 +44,7 @@ const { title } = Astro.props;
 		min-width: 0;
 		font: inherit;
 		scroll-behavior: smooth;
+		scroll-margin-top: 2.5rem;
 	}
 
 	*, *::after, *::before { box-sizing: border-box; }

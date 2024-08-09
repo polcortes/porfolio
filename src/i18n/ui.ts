@@ -22,6 +22,7 @@ export const UI = {
       options: 'Opciones',
       optionsTitle: 'Opciones',
       optionsDescription: 'Selecciona tu idioma',
+      goUp: 'Volver al inicio',
     },
     hero: {
       title: 'Pol Cortés',
@@ -68,6 +69,35 @@ export const UI = {
           ]
         }
       ]
+    },
+    projects: {
+      title: "Proyectos",
+      projects: [
+        {
+          title: "F5 Futsal",
+          description: "Landing sencilla hecha con Wordpress y Elementor",
+          link: "https://f5futsal.com",
+          linkTitle: "Enlace a la landing de F5 Futsal",
+          github: null,
+          githubTitle: null,
+          img: "https://pol-cortes.netlify.app/imgs/projects/f5-futsal.webp",
+          imgAlt: "Captura de la landing de F5 Futsal",
+          imgTitle: "Landing de F5Futsal",
+          techs: ["HTML5", "CSS3", "JavaScript", "JQuery", "PHP", "Wordpress", "Elementor"]
+        },
+        {
+          title: "Several.pro",
+          description: "Mejoré el SEO de la página principal de Several.pro usando Schema.org, mejorando descripciones y títulos y arreglando la semántica del HTML. Además también implementé y corregí algunas secciones de la página.",
+          link: "https://several.pro",
+          linkTitle: "Enlace a Several.pro",
+          github: null,
+          githubTitle: null,
+          img: "https://pol-cortes.netlify.app/imgs/projects/several.webp",
+          imgAlt: "Captura de la página de Several.pro",
+          imgTitle: "Página de Several.pro",
+          techs: ["HTML5", "CSS3", "JavaScript", "JQuery", "PHP", "Wordpress", "Elementor"]
+        }
+      ]
     }
   },
   en: {
@@ -83,6 +113,7 @@ export const UI = {
       options: 'Options',
       optionsTitle: 'Options',
       optionsDescription: 'Select your language',
+      goUp: 'Go back to the top',
     },
     hero: {
       title: 'Pol Cortés',
@@ -129,6 +160,35 @@ export const UI = {
           ]
         }
       ]
+    },
+    projects: {
+      title: "Projects",
+      projects: [
+        {
+          title: "F5 Futsal",
+          description: "Simple landing made with Wordpress and Elementor",
+          link: "https://f5futsal.com",
+          linkTitle: "Link to F5 Futsal's landing",
+          github: null,
+          githubTitle: null,
+          img: "https://pol-cortes.netlify.app/imgs/projects/f5-futsal.webp",
+          imgAlt: "Screenshot of F5 Futsal's landing",
+          imgTitle: "F5Futsal's landing",
+          techs: ["HTML5", "CSS3", "JavaScript", "JQuery", "PHP", "Wordpress", "Elementor"]
+        },
+        {
+          title: "Several.pro",
+          description: "I improved the SEO of Several.pro's homepage using Schema.org, improving descriptions and titles and fixing the HTML semantics. I also implemented and corrected some sections of the page.",
+          link: "https://several.pro",
+          linkTitle: "Link to Several.pro",
+          github: null,
+          githubTitle: null,
+          img: "https://pol-cortes.netlify.app/imgs/projects/several.webp",
+          imgAlt: "Screenshot of Several.pro's page",
+          imgTitle: "Several.pro's page",
+          techs: ["HTML5", "CSS3", "JavaScript", "JQuery", "PHP", "Wordpress", "Elementor"]
+        }
+      ]
     }
   },
   ca: {
@@ -144,6 +204,7 @@ export const UI = {
       options: 'Opcions',
       optionsTitle: 'Opcions',
       optionsDescription: 'Selecciona el teu idioma',
+      goUp: 'Tornar a dalt',
     },
     hero: {
       title: 'Pol Cortés',
@@ -188,6 +249,35 @@ export const UI = {
             "millorar el SEO d'aquesta mateixa fins a un 50%",
             " millorant la semàntica del DOM, afegint scripts específics de schema.org i creant meta descripcions coherents per a cada pàgina."
           ]
+        }
+      ]
+    },
+    projects: {
+      title: "Projectes",
+      projects: [
+        {
+          title: "F5 Futsal",
+          description: "Landing senzilla feta amb Wordpress i Elementor",
+          link: "https://f5futsal.com",
+          linkTitle: "Enllaç a la landing de F5 Futsal",
+          github: null,
+          githubTitle: null,
+          img: "https://pol-cortes.netlify.app/imgs/projects/f5futsal.webp",
+          imgAlt: "Captura de la landing de F5 Futsal",
+          imgTitle: "Landing de F5Futsal",
+          techs: ["HTML5", "CSS3", "JavaScript", "JQuery", "PHP", "Wordpress", "Elementor"]
+        },
+        {
+          title: "Several.pro",
+          description: "Vaig millorar el SEO de la pàgina principal de Several.pro utilitzant Schema.org, millorant descripcions i títols i arreglant la semàntica de l'HTML. A més també vaig implementar i corregir algunes seccions de la pàgina.",
+          link: "https://several.pro",
+          linkTitle: "Enllaç a Several.pro",
+          github: null,
+          githubTitle: null,
+          img: "https://pol-cortes.netlify.app/imgs/projects/several.pro.webp",
+          imgAlt: "Captura de la pàgina de Several.pro",
+          imgTitle: "Pàgina de Several.pro",
+          techs: ["HTML5", "CSS3", "JavaScript", "JQuery", "PHP", "Wordpress", "Elementor"]
         }
       ]
     }

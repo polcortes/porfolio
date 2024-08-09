@@ -19,7 +19,7 @@ const { title, description, link, linkTitle, github, img, imgAlt, imgTitle, tech
 <article>
   <h3>{ title }</h3>
   <p>{ description } </p>
-  <img src={ img } alt={ imgAlt }>
+  <img src={ img } alt={ imgAlt } width="960" height="720" loading="lazy" title={ imgTitle } />
   <ul class="tech-list">
     {techs.map(tech => (
       <li class="tech-badge">{ tech }</li>

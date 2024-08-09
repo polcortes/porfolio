@@ -3,12 +3,14 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../Header.astro';
 import WorkingBadge from '../WorkingBadge.astro';
 import Project from '../Project.astro';
+import GoUp from '../GoUp.astro';
 import RRSSList from '../RRSSList.svelte';
 
 import { WORKING_TIME } from '../../constants';
 import Experience from '../Experience.astro';
 
 import "$lib/app.css";
+import { type ProjectType } from '../../types';
 
 import { getLangFromUrl, useTranslations } from '$lib/i18n/utils';
 
@@ -42,7 +44,7 @@ const t = useTranslations(lang);
 						<RRSSList client:load />
 					</div>
 				</div>
-				<img src="https://pol-cortes.netlify.app/imgs/mi_foto.webp" alt="Yo">
+				<img src="https://pol-cortes.netlify.app/imgs/mi_foto.webp" alt="Yo" width="1319" height="1319" loading="eager" title="Pol Cortés" /> <!-- 1319x1319 -->
 			</section>
 		</section>
 
@@ -57,7 +59,24 @@ const t = useTranslations(lang);
 			<h2>Proyectos</h2>
 			<section>
 				<!-- title, description, link, linkTitle, github, img, imgAlt, imgTitle, techs -->
-				<Project 
+
+				{
+					t("projects").projects.map((project: ProjectType) => (
+						<Project 
+							title={ project.title }
+							description={ project.description }
+							link={ project.link }
+							linkTitle={ project.linkTitle }
+							github={ project.github }
+							img={ project.img }
+							imgAlt={ project.imgAlt }
+							imgTitle={ project.imgTitle }
+							techs={ project.techs }
+						/>
+					))
+				}
+
+				<!-- <Project 
 					title="F5 Futsal" 
 					description="Landing sencilla hecha con Wordpress y Elementor." 
 					link="https://f5futsal.com/" 
@@ -79,7 +98,7 @@ const t = useTranslations(lang);
 					imgAlt="Foto de la landing de F5 Futsal" 
 					imgTitle="Landing F5 Futsal" 
 					techs={[ "HTML5", "CSS3", "JavaScript", "JQuery", "PHP", "WordPress", "Elementor" ]}
-				/>
+				/> -->
 			</section>
 		</section>
 
@@ -97,6 +116,7 @@ const t = useTranslations(lang);
 				</li>
 			</ul>
 		</footer>
+		<GoUp />
 	</main>
 </Layout>
 
@@ -224,11 +244,12 @@ const t = useTranslations(lang);
 		text-decoration: none;
 		padding: .125rem .25rem;
 		border-radius: .25rem;
+		text-decoration: underline;
+
 		transition: background .15s linear;
 	}
 
 	#footer ul a:hover {
-		text-decoration: underline;
 		background: rgba(0, 0, 0, .05);
 	}
 
@@ -262,6 +283,10 @@ const t = useTranslations(lang);
 
 	#footer {
 		margin-bottom: 5rem;
+		flex-direction: column;
+		gap: .25rem;
+		width: max-content;
+		margin-inline: auto;
 	}
 
 	h2::after {
