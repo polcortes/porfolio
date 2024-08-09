@@ -80,7 +80,7 @@ export const UI = {
           linkTitle: "Enlace a la landing de F5 Futsal",
           github: null,
           githubTitle: null,
-          img: "https://pol-cortes.netlify.app/imgs/projects/f5-futsal.webp",
+          img: "https://pol-cortes.netlify.app/imgs/projects/f5futsal.webp",
           imgAlt: "Captura de la landing de F5 Futsal",
           imgTitle: "Landing de F5Futsal",
           techs: ["HTML5", "CSS3", "JavaScript", "JQuery", "PHP", "Wordpress", "Elementor"]
@@ -92,7 +92,7 @@ export const UI = {
           linkTitle: "Enlace a Several.pro",
           github: null,
           githubTitle: null,
-          img: "https://pol-cortes.netlify.app/imgs/projects/several.webp",
+          img: "https://pol-cortes.netlify.app/imgs/projects/several.pro.webp",
           imgAlt: "Captura de la página de Several.pro",
           imgTitle: "Página de Several.pro",
           techs: ["HTML5", "CSS3", "JavaScript", "JQuery", "PHP", "Wordpress", "Elementor"]
@@ -171,7 +171,7 @@ export const UI = {
           linkTitle: "Link to F5 Futsal's landing",
           github: null,
           githubTitle: null,
-          img: "https://pol-cortes.netlify.app/imgs/projects/f5-futsal.webp",
+          img: "https://pol-cortes.netlify.app/imgs/projects/f5futsal.webp",
           imgAlt: "Screenshot of F5 Futsal's landing",
           imgTitle: "F5Futsal's landing",
           techs: ["HTML5", "CSS3", "JavaScript", "JQuery", "PHP", "Wordpress", "Elementor"]
@@ -183,7 +183,7 @@ export const UI = {
           linkTitle: "Link to Several.pro",
           github: null,
           githubTitle: null,
-          img: "https://pol-cortes.netlify.app/imgs/projects/several.webp",
+          img: "https://pol-cortes.netlify.app/imgs/projects/several.pro.webp",
           imgAlt: "Screenshot of Several.pro's page",
           imgTitle: "Several.pro's page",
           techs: ["HTML5", "CSS3", "JavaScript", "JQuery", "PHP", "Wordpress", "Elementor"]
