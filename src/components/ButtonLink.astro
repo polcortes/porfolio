@@ -38,13 +38,17 @@ const { text, href, title, openInOtherTab } = Astro.props;
     font: var(--font-body);
     font-size: 1rem;
 
-    transition: background-color .15s linear;
+    transition: background-color .15s linear, scale .05s linear;
   }
 
   a:hover {
     /* background-color: hsla(var(--accent-color) / 90%); */
     background-color: hsla(207, 100%, 80%, 1);
     text-decoration: underline;
+  }
+
+  a:active {
+    scale: .95;
   }
 
   a > span {

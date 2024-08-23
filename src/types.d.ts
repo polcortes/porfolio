@@ -1,4 +1,4 @@
-import { UI } from './i18n/ui';
+import { UI,LANGUAGES } from './i18n/ui';
 
 export type Translation = keyof typeof UI;
 
@@ -19,4 +19,9 @@ export type ProjectType = {
   imgAlt: string;
   imgTitle: string;
   techs: string[];
+}
+
+export type LANGS = {
+  prefix: keyof typeof LANGUAGES;
+  name: typeof LANGUAGES[keyof typeof LANGUAGES];
 }

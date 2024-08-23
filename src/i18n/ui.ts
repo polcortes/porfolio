@@ -1,7 +1,7 @@
 import { WORKING_TIME } from "$lib/constants";
 
 export const LANGUAGES = {
-  en: 'Ensglish',
+  en: 'English',
   es: 'Español',
   ca: 'Català',
 };
@@ -41,6 +41,12 @@ export const UI = {
       ],
       amIWorking: 'Trabajando actualmente'
     },
+    rsslist: {
+      mail : {
+        title: 'Copia mi email',
+        copyTitle: 'Email copiado!',
+      },
+    },
     experience: {
       title: 'Experiencia',
       jobs: [
@@ -75,7 +81,7 @@ export const UI = {
       projects: [
         {
           title: "F5 Futsal",
-          description: "Landing sencilla hecha con Wordpress y Elementor",
+          description: "Landing sencilla hecha con Wordpress y Elementor para el equipo de futbol sala F5 futsal.",
           link: "https://f5futsal.com",
           linkTitle: "Enlace a la landing de F5 Futsal",
           github: null,
@@ -87,7 +93,8 @@ export const UI = {
         },
         {
           title: "Several.pro",
-          description: "Mejoré el SEO de la página principal de Several.pro usando Schema.org, mejorando descripciones y títulos y arreglando la semántica del HTML. Además también implementé y corregí algunas secciones de la página.",
+          // description: "Mejoré el SEO de la página principal de Several.pro usando Schema.org, mejorando descripciones y títulos y arreglando la semántica del HTML. Además también implementé y corregí algunas secciones de la página.",
+          description: "Aprendí mucho sobre el SEO y llegué a mejorar el de la landing de Several hasta un 50%.",
           link: "https://several.pro",
           linkTitle: "Enlace a Several.pro",
           github: null,
@@ -131,6 +138,12 @@ export const UI = {
         'ERP'
       ],
       amIWorking: 'Currently working'
+    },
+    rsslist: {
+      mail : {
+        title: 'Copy my email',
+        copyTitle: 'Email copied!',
+      },
     },
     experience: {
       title: 'Experience',
@@ -178,7 +191,8 @@ export const UI = {
         },
         {
           title: "Several.pro",
-          description: "I improved the SEO of Several.pro's homepage using Schema.org, improving descriptions and titles and fixing the HTML semantics. I also implemented and corrected some sections of the page.",
+          // description: "I improved the SEO of Several.pro's homepage using Schema.org, improving descriptions and titles and fixing the HTML semantics. I also implemented and corrected some sections of the page.",
+          desciption: "I learned a lot about SEO and managed to improve Several's landing up to 50%.",
           link: "https://several.pro",
           linkTitle: "Link to Several.pro",
           github: null,
@@ -222,6 +236,12 @@ export const UI = {
         'ERP'
       ],
       amIWorking: 'Treballant actualment'
+    },
+    rsslist: {
+      mail : {
+        title: 'Copia el meu email',
+        copyTitle: 'Email copiat!',
+      },
     },
     experience: {
       title: 'Experiència',
@@ -269,7 +289,8 @@ export const UI = {
         },
         {
           title: "Several.pro",
-          description: "Vaig millorar el SEO de la pàgina principal de Several.pro utilitzant Schema.org, millorant descripcions i títols i arreglant la semàntica de l'HTML. A més també vaig implementar i corregir algunes seccions de la pàgina.",
+          // description: "Vaig millorar el SEO de la pàgina principal de Several.pro utilitzant Schema.org, millorant descripcions i títols i arreglant la semàntica de l'HTML. A més també vaig implementar i corregir algunes seccions de la pàgina.",
+          description: "Vaig aprendre molt sobre SEO i millorar la landing de Several fins a un 50%.",
           link: "https://several.pro",
           linkTitle: "Enllaç a Several.pro",
           github: null,

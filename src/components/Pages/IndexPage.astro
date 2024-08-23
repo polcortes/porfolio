@@ -41,7 +41,7 @@ const t = useTranslations(lang);
 					<div>
 						<WorkingBadge text={ t("hero").amIWorking } />
 						―
-						<RRSSList client:load />
+						<RRSSList client:load onlyRRSS={ false } lang={ lang } />
 					</div>
 				</div>
 				<img src="https://pol-cortes.netlify.app/imgs/mi_foto.webp" alt="Yo" width="1319" height="1319" loading="eager" title="Pol Cortés" /> <!-- 1319x1319 -->
@@ -75,31 +75,14 @@ const t = useTranslations(lang);
 						/>
 					))
 				}
-
-				<!-- <Project 
-					title="F5 Futsal" 
-					description="Landing sencilla hecha con Wordpress y Elementor." 
-					link="https://f5futsal.com/" 
-					linkTitle="Enlace a la landing de F5 Futsal" 
-					github={ null } 
-					img="https://pol-cortes.netlify.app/imgs/projects/f5futsal.webp" 
-					imgAlt="Foto de la landing de F5 Futsal" 
-					imgTitle="Landing F5 Futsal" 
-					techs={[ "HTML5", "CSS3", "JavaScript", "JQuery", "PHP", "WordPress", "Elementor" ]}
-				/>
-
-				<Project 
-					title="F5 Futsal" 
-					description="Landing sencilla hecha con Wordpress y Elementor." 
-					link="https://f5futsal.com/" 
-					linkTitle="Enlace a la landing de F5 Futsal" 
-					github={ null } 
-					img="https://pol-cortes.netlify.app/imgs/projects/f5futsal.webp" 
-					imgAlt="Foto de la landing de F5 Futsal" 
-					imgTitle="Landing F5 Futsal" 
-					techs={[ "HTML5", "CSS3", "JavaScript", "JQuery", "PHP", "WordPress", "Elementor" ]}
-				/> -->
 			</section>
+		</section>
+
+		<section id="contacto">
+			<h2>Contacto</h2>
+			<p>Actualmente estoy trabajando, pero siempre estoy abierto a escuchar oportunidades. Así puedes contactar conmigo:</p>
+
+			<RRSSList client:load onlyRRSS={ true } lang={ lang } />
 		</section>
 
 		<footer id="footer">
@@ -214,14 +197,22 @@ const t = useTranslations(lang);
     z-index: -1;
 	}
 
-	#experiencia, #proyectos {
-		padding-bottom: 3rem;
+	#experiencia, #proyectos, #contacto {
+		padding-bottom: 6rem;
 	}
 
 	#proyectos > section {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 2rem;
+	}
+
+	#contacto p {
+		font: var(--font-body);
+    font-size: 1rem;
+    padding-bottom: .25rem;
+		max-width: 50ch;
+		margin-bottom: 1rem;
 	}
 
 	#footer {

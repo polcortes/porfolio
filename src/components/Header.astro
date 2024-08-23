@@ -5,8 +5,10 @@ import AboutMeIcon from "../icons/AboutMeIcon.astro"
 import ContactIcon from "../icons/ContactIcon.astro"
 
 import Options from "./Options.svelte"
+import Dropdown from "./Dropdown.svelte"
 
 import { getLangFromUrl, useTranslations } from '$lib/i18n/utils';
+import { LANGUAGES } from '../i18n/ui';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -44,6 +46,8 @@ const t = useTranslations(lang);
       </li>
     </ul>
   </nav>
+
+  <Dropdown title={ LANGUAGES[lang] } items={ [{ prefix: 'es', name: "Español" }, { prefix: 'en', name: 'English' }, { prefix: 'ca', name: "Català" }] } client:load />
 </header>
 
 <style>
@@ -59,6 +63,7 @@ const t = useTranslations(lang);
     padding-bottom: 1rem;
     background: hsla(0, 0%, 100%, 90%);
     z-index: 5;
+    padding-inline: 2rem;
 
     animation: shrink-header linear forwards;
     animation-timeline: scroll();
@@ -120,7 +125,7 @@ const t = useTranslations(lang);
     border-bottom-right-radius: .25rem;
   }
 
-  nav > ul > li > a:hover
+  nav > ul > li > a:hover,
   nav > ul > li button:hover {
     background: hsla(var(--accent-color) / 50%)
   }

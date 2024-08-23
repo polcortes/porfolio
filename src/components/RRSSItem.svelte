@@ -23,6 +23,11 @@
     place-content: center;
     width: fit-content;
     border-radius: 50%;
+    transition: scale 0.05s;
+  }
+
+  a:active {
+    scale: .95;
   }
 
   li > span {

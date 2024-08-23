@@ -19,13 +19,16 @@ const t = useTranslations(lang);
     border-radius: 50%;
     border: 1px solid hsla(var(--text-color) / 30%);
 
-    transition: background .15s linear, border-color .15s linear;
+    transition: background .15s linear, border-color .15s linear, scale .05s linear;
   }
 
   a:hover {
     border-color: black;
     background: hsla(var(--accent-color) / 90%);
-    transition: background .15s linear, border-color .25s linear;
+  }
+
+  a:active {
+    scale: .95;
   }
 
   @media screen and (max-width: 650px) {
