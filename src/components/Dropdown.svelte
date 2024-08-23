@@ -77,6 +77,8 @@
     box-sizing: border-box;
     width: 100%;
     display: flex;
+
+    transition: background-color .15s linear;
   }
 
   a:hover {

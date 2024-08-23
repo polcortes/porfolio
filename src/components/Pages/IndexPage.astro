@@ -38,13 +38,13 @@ const t = useTranslations(lang);
 						return <mark>{ desc }</mark>
 						})}
 					</p>
-					<div>
+					<div class="working-contact-section">
 						<WorkingBadge text={ t("hero").amIWorking } />
 						―
 						<RRSSList client:load onlyRRSS={ false } lang={ lang } />
 					</div>
 				</div>
-				<img src="https://pol-cortes.netlify.app/imgs/mi_foto.webp" alt="Yo" width="1319" height="1319" loading="eager" title="Pol Cortés" /> <!-- 1319x1319 -->
+				<img src="/imgs/mi_foto.webp" alt="Yo" width="1319" height="1319" loading="eager" title="Pol Cortés" /> <!-- 1319x1319 -->
 			</section>
 		</section>
 
@@ -290,6 +290,12 @@ const t = useTranslations(lang);
 @media screen and (max-width: 500px) {
 	h1 {
 		font-size: 3rem;
+	}
+
+	.working-contact-section {
+		flex-direction: column;
+		gap: .5rem !important;
+		align-items: start !important;
 	}
 }
 
