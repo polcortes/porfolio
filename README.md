@@ -8,3 +8,4 @@ cd ./porfolio
 pnpm install
 pnpm run dev
 ```
+I accept any feedback! You can contact me [via LinkedIn](https://www.linkedin.com/in/pol-cort%C3%A9s-757b69285/)
