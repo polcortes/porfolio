@@ -1,4 +1,6 @@
 # Welcome to my Portfolio!
+![portfolio_sample (2)](https://github.com/user-attachments/assets/48f1c1ab-95cc-40d6-a1c3-9cb971bdc6d6)
+
 For this website I used: Astro, Svelte and Tailwind
 
 ## How to install:
