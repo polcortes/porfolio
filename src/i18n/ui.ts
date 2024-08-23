@@ -12,7 +12,7 @@ export const UI = {
   es: {
     meta: {
       title: 'Pol Cortés | Desarrollador Web Frontend',
-      description: `Desarrollador Web Frontend Junior, localizado a pocos minutos de Barcelona centro y apasionado por la UX y el SEO. ${ WORKING_TIME() }`,
+      description: `Desarrollador Web Frontend Junior, localizado a pocos minutos de Barcelona centro y apasionado por la UX y el SEO.`,
       keywords: 'desarrollador web, frontend, junior, barcelona, ux, seo, html, css, tailwind, javascript, jquery, astro, svelte, responsive, performance',
     },
     navbar: {
@@ -39,7 +39,9 @@ export const UI = {
         ' y desarrollo de una ',
         'ERP'
       ],
-      amIWorking: 'Trabajando actualmente'
+      amIWorking: 'Trabajando actualmente',
+      workingTime1: 'años y',
+      workingTime2: 'meses de experiencia',
     },
     rsslist: {
       mail : {
@@ -117,7 +119,7 @@ export const UI = {
   en: {
     meta: {
       title: 'Pol Cortés | Frontend Developer',
-      description: `Junior Frontend Developer, located a few minutes from downtown Barcelona and passionate about UX and SEO. ${ WORKING_TIME() }`,
+      description: `Junior Frontend Developer, located a few minutes from downtown Barcelona and passionate about UX and SEO.`,
       keywords: 'web developer, frontend, junior, barcelona, ux, seo, html, css, tailwind, javascript, jquery, astro, svelte, responsive, performance',
     },
     navbar: {
@@ -144,7 +146,9 @@ export const UI = {
         ' and development of an ',
         'ERP'
       ],
-      amIWorking: 'Currently working'
+      amIWorking: 'Currently working',
+      workingTime1: 'years and',
+      workingTime2: 'months of experience',
     },
     rsslist: {
       mail : {
@@ -222,7 +226,7 @@ export const UI = {
   ca: {
     meta: {
       title: 'Pol Cortés | Desenvolupador Web Frontend',
-      description: `Desenvolupador Web Frontend Junior, localitzat a pocs minuts del centre de Barcelona i apassionat per la UX i el SEO. ${ WORKING_TIME() }`,
+      description: `Desenvolupador Web Frontend Junior, localitzat a pocs minuts del centre de Barcelona i apassionat per la UX i el SEO.`,
       keywords: 'desenvolupador web, frontend, junior, barcelona, ux, seo, html, css, tailwind, javascript, jquery, astro, svelte, responsive, performance',
     },
     navbar: {
@@ -249,7 +253,9 @@ export const UI = {
         ' i desenvolupament d\'un ',
         'ERP'
       ],
-      amIWorking: 'Treballant actualment'
+      amIWorking: 'Treballant actualment',
+      workingTime1: 'anys i',
+      workingTime2: 'mesos d\'experiència',
     },
     rsslist: {
       mail : {

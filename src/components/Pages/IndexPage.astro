@@ -25,7 +25,7 @@ const t = useTranslations(lang);
 			<section>
 				<div>
 					<h1>{ t("hero").title }</h1>
-					<span>{ t("hero").subtitle }{ WORKING_TIME() }</span>
+					<span>{ t("hero").subtitle }{ WORKING_TIME(lang) }</span>
 					<p>
 						{ t("hero").description1.map((desc: string, i: number) => {
 						if (i % 2 === 0) return desc
