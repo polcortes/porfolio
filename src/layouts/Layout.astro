@@ -23,6 +23,28 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="keywords" content={ t('meta').keywords }>
 		<link rel="canonical" href="https://polcortes.vercel.app" />
+		<!-- Schema.org -->
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "Person",
+				"name": "Pol Cortés García",
+				"url": "https://polcortes.vercel.app/",
+				"sameAs": [
+					"https://www.linkedin.com/in/pol-cort%C3%A9s-757b69285/",
+					"https://github.com/polcortes/"
+				],
+				"jobTitle": "Desarrollador Web",
+				"worksFor": {
+					"@type": "Organization",
+					"name": "Industry Labs",
+					"url": "https://www.industrylabs.biz/"
+				},
+				"image": "https://polcortes.vercel.app/imgs/mi_foto.webp",
+				"knows": "HTML, CSS, JavaScript, JQuery, PHP, Wordpress, Elementor, WooCommerce, Astro, Tailwind, NodeJS, MySQL, MongoDB, Python, Django, Git, Github, Java.",
+				"description": "Soy un estudiante de Desarrollo de Aplicaciones Web (CFGS - DAW) con experiencia en HTML5, CSS3, JavaScript, JQuery, Wordpress y PHP."
+			}
+		</script>
 		<!-- <meta name="generator" content={Astro.generator} /> -->
 		<meta name="theme-color" content="#FFD952" />
 		<title>{ t('meta').title }</title>

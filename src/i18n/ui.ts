@@ -105,6 +105,10 @@ export const UI = {
           techs: ["HTML5", "CSS3", "JavaScript", "JQuery", "PHP", "Wordpress", "Elementor"]
         }
       ]
+    },
+    contacto: {
+      title: 'Contacto',
+      description: 'Cómo contactar conmigo:'
     }
   },
   en: {
@@ -203,6 +207,10 @@ export const UI = {
           techs: ["HTML5", "CSS3", "JavaScript", "JQuery", "PHP", "Wordpress", "Elementor"]
         }
       ]
+    },
+    contacto: {
+      title: 'Contact',
+      description: 'How to contact me:'
     }
   },
   ca: {
@@ -301,6 +309,10 @@ export const UI = {
           techs: ["HTML5", "CSS3", "JavaScript", "JQuery", "PHP", "Wordpress", "Elementor"]
         }
       ]
+    },
+    contacto: {
+      title: 'Contacte',
+      description: 'Com contactar amb mi:'
     }
-  },
+  }
 }

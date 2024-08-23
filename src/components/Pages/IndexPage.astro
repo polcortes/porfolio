@@ -79,8 +79,8 @@ const t = useTranslations(lang);
 		</section>
 
 		<section id="contacto">
-			<h2>Contacto</h2>
-			<p>Actualmente estoy trabajando, pero siempre estoy abierto a escuchar oportunidades. Así puedes contactar conmigo:</p>
+			<h2>{ t("contacto").title }</h2>
+			<p>{ t("contacto").description }</p>
 
 			<RRSSList client:load onlyRRSS={ true } lang={ lang } />
 		</section>
