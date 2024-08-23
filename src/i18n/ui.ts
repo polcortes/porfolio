@@ -109,6 +109,9 @@ export const UI = {
     contacto: {
       title: 'Contacto',
       description: 'Cómo contactar conmigo:'
+    },
+    footer: {
+      text: 'Porfolio hecho con Astro y Svelte.'
     }
   },
   en: {
@@ -196,7 +199,7 @@ export const UI = {
         {
           title: "Several.pro",
           // description: "I improved the SEO of Several.pro's homepage using Schema.org, improving descriptions and titles and fixing the HTML semantics. I also implemented and corrected some sections of the page.",
-          desciption: "I learned a lot about SEO and managed to improve Several's landing up to 50%.",
+          description: "I learned a lot about SEO and managed to improve Several's landing up to 50%.",
           link: "https://several.pro",
           linkTitle: "Link to Several.pro",
           github: null,
@@ -211,6 +214,9 @@ export const UI = {
     contacto: {
       title: 'Contact',
       description: 'How to contact me:'
+    },
+    footer: {
+      text: 'Portfolio made with Astro and Svelte.'
     }
   },
   ca: {
@@ -313,6 +319,9 @@ export const UI = {
     contacto: {
       title: 'Contacte',
       description: 'Com contactar amb mi:'
+    },
+    footer: {
+      text: 'Portfoli fet amb Astro i Svelte.'
     }
   }
 }
